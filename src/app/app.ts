@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { AddTaskComponent } from './add-task/add-task';
 import { TodoListComponent } from './todo-list/todo-list';
 import { FinishedListComponent } from './finished-list/finished-list';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, AddTaskComponent, TodoListComponent, FinishedListComponent],
+  imports: [CommonModule, AddTaskComponent, TodoListComponent, FinishedListComponent, MatCardModule],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

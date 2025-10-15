@@ -1,7 +1,49 @@
-:host {
+.app-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.section-card {
+  width: 700px;
+  min-height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+mat-card-header {
+  background-color: #1976d2; /* default blue */
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  padding: 10px 16px;
+}
+
+.add-card mat-card-header {
+  background-color: #1976d2; /* Blue for add section */
+}
+
+.todo-card mat-card-header {
+  background-color: #388e3c; /* Green for todo section */
+}
+
+.finished-card mat-card-header {
+  background-color: #0288d1; /* Cyan for finished section */
+}
+
+
+
+
+
+
+
+
+
+/* :host {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 800px;
-}
+} */

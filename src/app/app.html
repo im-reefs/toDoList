@@ -1,3 +1,46 @@
+<div class="app-container">
+  <!-- Add Task -->
+  <mat-card class="section-card add-card">
+    <mat-card-header>
+      <mat-card-title color="primary">Add Task</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-add-task (taskAdded)="addTask($event)"></app-add-task>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- To-Do List -->
+  <mat-card class="section-card todo-card">
+    <mat-card-header>
+      <mat-card-title color="accent">To-Do List</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-todo-list
+        [tasks]="todoTasks"
+        (finished)="moveToFinished($event)"
+        (deleted)="deleteTask($event)">
+      </app-todo-list>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Finished Tasks -->
+  <mat-card class="section-card finished-card">
+    <mat-card-header>
+      <mat-card-title color="warn">Finished Tasks</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <app-finished-list [finishedTasks]="finishedTasks"></app-finished-list>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+
+
+
+
+<!-- 
+
 <div class="container py-0 m-0">
   <div class="card mb-4" style="height: 13rem; width: 100%;">
     <div class="card-header bg-primary text-white">Add Task</div>
@@ -24,3 +67,10 @@
     </div>
   </div>
 </div>
+
+-->
+
+
+
+
+

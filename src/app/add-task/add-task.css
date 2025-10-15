@@ -14,10 +14,11 @@
 .task-input {
   width: 70%;
   margin-right: 10px;
+  margin-top: 10px;
 }
 
 button {
-  margin-top: 6px;
+  margin-top: 18px;
 }
 
 .wrapper{
