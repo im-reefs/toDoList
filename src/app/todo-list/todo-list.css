@@ -2,42 +2,50 @@
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 0px 20px;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
+  transition: box-shadow 0.3s ease;
 }
 
+.todo-list:hover {
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Make the inner container flex horizontally */
 .todo-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 6px 0;
-  padding: 8px;
-  border-bottom: 1px solid #eee;
+  justify-content: space-between;
+  padding: 10px 10px;
+  width: 100%;
 }
 
-.todo-item:last-child {
-  border-bottom: none;
+.task-text {
+  font-size: 16px;
+  flex: 1;
+  word-break: break-word;
 }
 
-.todo-item button {
-  margin-left: 6px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 13px;
-  color: #fff;
+/* Buttons on the right */
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
-.todo-item button:first-of-type {
-  background-color: #28a745;
+button[mat-icon-button] {
+  transition: transform 0.1s ease;
 }
 
-.todo-item button:last-of-type {
-  background-color: #dc3545;
+button[mat-icon-button]:hover {
+  transform: scale(1.1);
 }
 
-.todo-item button:hover {
-  opacity: 0.85;
+button[color='primary'] mat-icon {
+  color: #4caf50;
+}
+
+button[color='warn'] mat-icon {
+  color: #f44336;
 }

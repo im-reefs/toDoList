@@ -1,5 +1,8 @@
-<ul class="list-group">
-  <li *ngFor="let task of finishedTasks" class="list-group-item">
-    {{ task }}
-  </li>
-</ul>
+<mat-card-content>
+  <mat-list>
+    <mat-list-item *ngFor="let task of finishedTasks" class="finished-item">
+      {{ task }}
+    </mat-list-item>
+  </mat-list>
+</mat-card-content>
+

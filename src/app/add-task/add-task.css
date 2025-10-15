@@ -7,29 +7,22 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 20px;
 }
 
-.add-task input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
+.task-input {
+  width: 70%;
+  margin-right: 10px;
 }
 
-.add-task button {
-  background-color: #007bff;
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.2s;
+button {
+  margin-top: 6px;
 }
 
-.add-task button:hover {
-  background-color: #0056b3;
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
