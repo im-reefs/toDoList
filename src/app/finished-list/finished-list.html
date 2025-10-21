@@ -1,8 +1,13 @@
 <mat-card-content>
   <mat-list>
+    <!-- Tasks from 3 random GET requests -->
+    <mat-list-item *ngFor="let task of apiFinishedTasks" class="finished-item">
+      {{ task.todo }}
+    </mat-list-item>
+
+    <!-- Dynamically added finished tasks from parent -->
     <mat-list-item *ngFor="let task of finishedTasks" class="finished-item">
-      {{ task }}
+      {{ task.todo }}
     </mat-list-item>
   </mat-list>
 </mat-card-content>
-

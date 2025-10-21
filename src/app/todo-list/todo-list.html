@@ -2,8 +2,8 @@
   <mat-list>
     <mat-list-item *ngFor="let task of tasks; let i = index">
       <div class="todo-item">
-        <span class="task-text" [class.finished]="finishedIndexes.has(i)">
-          {{ task }}
+        <span class="task-text" [class.finished]="task.completed">
+          {{ task.todo }}
         </span>
 
         <div class="action-buttons">
@@ -11,7 +11,7 @@
             mat-icon-button
             color="primary"
             aria-label="Mark done"
-            (click)="onFinish(i)">
+            (click)="onFinish(task)">
             <mat-icon>done</mat-icon>
           </button>
 
@@ -19,7 +19,7 @@
             mat-icon-button
             color="warn"
             aria-label="Delete"
-            (click)="onDelete(i)">
+            (click)="onDelete(task)">
             <mat-icon>delete</mat-icon>
           </button>
         </div>

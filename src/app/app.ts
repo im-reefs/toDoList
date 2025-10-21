@@ -4,6 +4,7 @@ import { AddTaskComponent } from './add-task/add-task';
 import { TodoListComponent } from './todo-list/todo-list';
 import { FinishedListComponent } from './finished-list/finished-list';
 import { MatCardModule } from '@angular/material/card';
+import {Task} from './add-task/add-task'
 
 @Component({
   selector: 'app-root',
@@ -13,19 +14,30 @@ import { MatCardModule } from '@angular/material/card';
   styleUrls: ['./app.css']
 })
 export class AppComponent {
-  todoTasks: string[] = [];
-  finishedTasks: string[] = [];
+  todoTasks: Task[] = [];
+  finishedTasks: Task[] = [];
 
-  addTask(task: string) {
-    if (task.trim()) this.todoTasks.push(task);
+  addTask(task: any) {
+    this.todoTasks.push(task); // no trim needed, since it's already structured
+  }
+  moveToFinished(task: Task) {
+
+    this.todoTasks = this.todoTasks.filter(t => t !== task);
+    this.finishedTasks.push({ ...task, completed: true });
+    // const task = this.todoTasks[index];
+    // if (!task) return;
+
+    // // ✅ Update its status
+    // const updatedTask = { ...task, completed: true };
+
+    // // ✅ Update arrays immutably (Angular will re-render)
+    // this.todoTasks = this.todoTasks.filter((_, i) => i !== index);
+    // this.finishedTasks = [...this.finishedTasks, updatedTask];
   }
 
-  moveToFinished(index: number) {
-    const task = this.todoTasks.splice(index, 1)[0];
-    this.finishedTasks.push(task);
+  deleteTask(task: Task) {
+    // ✅ Create new array instead of mutating
+    this.todoTasks = this.todoTasks.filter(t => t.id !== task.id);
   }
 
-  deleteTask(index: number) {
-    this.todoTasks.splice(index, 1);
-  }
 }
