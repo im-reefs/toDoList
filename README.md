@@ -2,7 +2,11 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.4.
 
+App layout
 <img width="983" height="882" alt="image" src="https://github.com/user-attachments/assets/8f6c5d41-5ad4-456a-b613-e45c4a715dd4" />
+
+App output console
+<img width="765" height="258" alt="image" src="https://github.com/user-attachments/assets/8e7818f6-2f68-4d90-bc99-bf0b43bdc549" />
 
 
 
